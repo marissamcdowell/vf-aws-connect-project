@@ -1,0 +1,1349 @@
+{
+  "Resources": {
+    "VanityNumbers9448E191": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "KeySchema": [
+          {
+            "AttributeName": "PHONE_NUMBER",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "TIMESTAMP",
+            "KeyType": "RANGE"
+          }
+        ],
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "PHONE_NUMBER",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "TIMESTAMP",
+            "AttributeType": "N"
+          },
+          {
+            "AttributeName": "STATUS",
+            "AttributeType": "S"
+          }
+        ],
+        "GlobalSecondaryIndexes": [
+          {
+            "IndexName": "timestampGSI",
+            "KeySchema": [
+              {
+                "AttributeName": "STATUS",
+                "KeyType": "HASH"
+              },
+              {
+                "AttributeName": "TIMESTAMP",
+                "KeyType": "RANGE"
+              }
+            ],
+            "Projection": {
+              "ProjectionType": "ALL"
+            },
+            "ProvisionedThroughput": {
+              "ReadCapacityUnits": 5,
+              "WriteCapacityUnits": 5
+            }
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": 5,
+          "WriteCapacityUnits": 5
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/VanityNumbers/Resource"
+      }
+    },
+    "VanitiesHandlerServiceRole46BCF9E5": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/VanitiesHandler/ServiceRole/Resource"
+      }
+    },
+    "VanitiesHandlerServiceRoleDefaultPolicyCADD368C": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "VanityNumbers9448E191",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "VanityNumbers9448E191",
+                          "Arn"
+                        ]
+                      },
+                      "/index/*"
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "VanitiesHandlerServiceRoleDefaultPolicyCADD368C",
+        "Roles": [
+          {
+            "Ref": "VanitiesHandlerServiceRole46BCF9E5"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/VanitiesHandler/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "VanitiesHandlerADAFC9C2": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342S3Bucket0D35B50D"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342S3VersionKeyC8D51962"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342S3VersionKeyC8D51962"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "VanitiesHandlerServiceRole46BCF9E5",
+            "Arn"
+          ]
+        },
+        "Environment": {
+          "Variables": {
+            "VANITY_NUMBERS_TABLE": {
+              "Ref": "VanityNumbers9448E191"
+            }
+          }
+        },
+        "Handler": "vanities.handler",
+        "Runtime": "nodejs12.x",
+        "Timeout": 8
+      },
+      "DependsOn": [
+        "VanitiesHandlerServiceRoleDefaultPolicyCADD368C",
+        "VanitiesHandlerServiceRole46BCF9E5"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/VanitiesHandler/Resource",
+        "aws:asset:path": "asset.75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342",
+        "aws:asset:property": "Code"
+      }
+    },
+    "LastFiveHandlerServiceRole8D838C15": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/LastFiveHandler/ServiceRole/Resource"
+      }
+    },
+    "LastFiveHandlerServiceRoleDefaultPolicy187ACC3B": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "dynamodb:BatchGetItem",
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+                "dynamodb:Query",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:ConditionCheckItem"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "VanityNumbers9448E191",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "VanityNumbers9448E191",
+                          "Arn"
+                        ]
+                      },
+                      "/index/*"
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "LastFiveHandlerServiceRoleDefaultPolicy187ACC3B",
+        "Roles": [
+          {
+            "Ref": "LastFiveHandlerServiceRole8D838C15"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/LastFiveHandler/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "LastFiveHandler732DFC20": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342S3Bucket0D35B50D"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342S3VersionKeyC8D51962"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342S3VersionKeyC8D51962"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "LastFiveHandlerServiceRole8D838C15",
+            "Arn"
+          ]
+        },
+        "Environment": {
+          "Variables": {
+            "VANITY_NUMBERS_TABLE": {
+              "Ref": "VanityNumbers9448E191"
+            }
+          }
+        },
+        "Handler": "last5calls.handler",
+        "Runtime": "nodejs12.x"
+      },
+      "DependsOn": [
+        "LastFiveHandlerServiceRoleDefaultPolicy187ACC3B",
+        "LastFiveHandlerServiceRole8D838C15"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/LastFiveHandler/Resource",
+        "aws:asset:path": "asset.75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342",
+        "aws:asset:property": "Code"
+      }
+    },
+    "Last5CallsEndpoint423E5997": {
+      "Type": "AWS::ApiGateway::RestApi",
+      "Properties": {
+        "Name": "Last5CallsEndpoint"
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/Last5CallsEndpoint/Resource"
+      }
+    },
+    "Last5CallsEndpointCloudWatchRoleD2243925": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "apigateway.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/Last5CallsEndpoint/CloudWatchRole/Resource"
+      }
+    },
+    "Last5CallsEndpointAccountEF6EF419": {
+      "Type": "AWS::ApiGateway::Account",
+      "Properties": {
+        "CloudWatchRoleArn": {
+          "Fn::GetAtt": [
+            "Last5CallsEndpointCloudWatchRoleD2243925",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "Last5CallsEndpoint423E5997"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/Last5CallsEndpoint/Account"
+      }
+    },
+    "Last5CallsEndpointDeploymentAA7818ECead021f773229364453e0990f6f50f89": {
+      "Type": "AWS::ApiGateway::Deployment",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "Last5CallsEndpoint423E5997"
+        },
+        "Description": "Automatically created by the RestApi construct"
+      },
+      "DependsOn": [
+        "Last5CallsEndpointproxyANYF509B819",
+        "Last5CallsEndpointproxy9049E1E0",
+        "Last5CallsEndpointANY87A11631"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/Last5CallsEndpoint/Deployment/Resource"
+      }
+    },
+    "Last5CallsEndpointDeploymentStageprod77C2FCCC": {
+      "Type": "AWS::ApiGateway::Stage",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "Last5CallsEndpoint423E5997"
+        },
+        "DeploymentId": {
+          "Ref": "Last5CallsEndpointDeploymentAA7818ECead021f773229364453e0990f6f50f89"
+        },
+        "StageName": "prod"
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/Last5CallsEndpoint/DeploymentStage.prod/Resource"
+      }
+    },
+    "Last5CallsEndpointproxy9049E1E0": {
+      "Type": "AWS::ApiGateway::Resource",
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "Last5CallsEndpoint423E5997",
+            "RootResourceId"
+          ]
+        },
+        "PathPart": "{proxy+}",
+        "RestApiId": {
+          "Ref": "Last5CallsEndpoint423E5997"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/Last5CallsEndpoint/Default/{proxy+}/Resource"
+      }
+    },
+    "Last5CallsEndpointproxyANYApiPermissionMarissaInterviewProjectStackLast5CallsEndpoint467EE6C9ANYproxy0B646D64": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "LastFiveHandler732DFC20",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "Last5CallsEndpoint423E5997"
+              },
+              "/",
+              {
+                "Ref": "Last5CallsEndpointDeploymentStageprod77C2FCCC"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/Last5CallsEndpoint/Default/{proxy+}/ANY/ApiPermission.MarissaInterviewProjectStackLast5CallsEndpoint467EE6C9.ANY..{proxy+}"
+      }
+    },
+    "Last5CallsEndpointproxyANYApiPermissionTestMarissaInterviewProjectStackLast5CallsEndpoint467EE6C9ANYproxy88177B3F": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "LastFiveHandler732DFC20",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "Last5CallsEndpoint423E5997"
+              },
+              "/test-invoke-stage/*/*"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/Last5CallsEndpoint/Default/{proxy+}/ANY/ApiPermission.Test.MarissaInterviewProjectStackLast5CallsEndpoint467EE6C9.ANY..{proxy+}"
+      }
+    },
+    "Last5CallsEndpointproxyANYF509B819": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "ANY",
+        "ResourceId": {
+          "Ref": "Last5CallsEndpointproxy9049E1E0"
+        },
+        "RestApiId": {
+          "Ref": "Last5CallsEndpoint423E5997"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "LastFiveHandler732DFC20",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/Last5CallsEndpoint/Default/{proxy+}/ANY/Resource"
+      }
+    },
+    "Last5CallsEndpointANYApiPermissionMarissaInterviewProjectStackLast5CallsEndpoint467EE6C9ANY98F6B870": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "LastFiveHandler732DFC20",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "Last5CallsEndpoint423E5997"
+              },
+              "/",
+              {
+                "Ref": "Last5CallsEndpointDeploymentStageprod77C2FCCC"
+              },
+              "/*/"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/Last5CallsEndpoint/Default/ANY/ApiPermission.MarissaInterviewProjectStackLast5CallsEndpoint467EE6C9.ANY.."
+      }
+    },
+    "Last5CallsEndpointANYApiPermissionTestMarissaInterviewProjectStackLast5CallsEndpoint467EE6C9ANY5E9457AA": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "LastFiveHandler732DFC20",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "Last5CallsEndpoint423E5997"
+              },
+              "/test-invoke-stage/*/"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/Last5CallsEndpoint/Default/ANY/ApiPermission.Test.MarissaInterviewProjectStackLast5CallsEndpoint467EE6C9.ANY.."
+      }
+    },
+    "Last5CallsEndpointANY87A11631": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "HttpMethod": "ANY",
+        "ResourceId": {
+          "Fn::GetAtt": [
+            "Last5CallsEndpoint423E5997",
+            "RootResourceId"
+          ]
+        },
+        "RestApiId": {
+          "Ref": "Last5CallsEndpoint423E5997"
+        },
+        "AuthorizationType": "NONE",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "Type": "AWS_PROXY",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region"
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "LastFiveHandler732DFC20",
+                    "Arn"
+                  ]
+                },
+                "/invocations"
+              ]
+            ]
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/Last5CallsEndpoint/Default/ANY/Resource"
+      }
+    },
+    "Last5CallsAppBucket0D9783D8": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "WebsiteConfiguration": {
+          "IndexDocument": "index.html"
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/Last5CallsAppBucket/Resource"
+      }
+    },
+    "Last5CallsAppBucketPolicyA361D4C8": {
+      "Type": "AWS::S3::BucketPolicy",
+      "Properties": {
+        "Bucket": {
+          "Ref": "Last5CallsAppBucket0D9783D8"
+        },
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "s3:GetObject",
+              "Effect": "Allow",
+              "Principal": "*",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    {
+                      "Fn::GetAtt": [
+                        "Last5CallsAppBucket0D9783D8",
+                        "Arn"
+                      ]
+                    },
+                    "/*"
+                  ]
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/Last5CallsAppBucket/Policy/Resource"
+      }
+    },
+    "deployStaticWebsiteAwsCliLayer74CBF04E": {
+      "Type": "AWS::Lambda::LayerVersion",
+      "Properties": {
+        "Content": {
+          "S3Bucket": {
+            "Ref": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3BucketAEADE8C7"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3VersionKeyE415415F"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3VersionKeyE415415F"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Description": "/opt/awscli/aws"
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/deployStaticWebsite/AwsCliLayer/Resource",
+        "aws:asset:path": "asset.e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68.zip",
+        "aws:asset:property": "Content"
+      }
+    },
+    "deployStaticWebsiteCustomResource73B4205E": {
+      "Type": "Custom::CDKBucketDeployment",
+      "Properties": {
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536",
+            "Arn"
+          ]
+        },
+        "SourceBucketNames": [
+          {
+            "Ref": "AssetParameters57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30S3Bucket9E2CBC0B"
+          }
+        ],
+        "SourceObjectKeys": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30S3VersionKey95A7C1ED"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30S3VersionKey95A7C1ED"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        ],
+        "DestinationBucketName": {
+          "Ref": "Last5CallsAppBucket0D9783D8"
+        },
+        "Prune": true
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/deployStaticWebsite/CustomResource/Default"
+      }
+    },
+    "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource"
+      }
+    },
+    "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":s3:::",
+                      {
+                        "Ref": "AssetParameters57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30S3Bucket9E2CBC0B"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":s3:::",
+                      {
+                        "Ref": "AssetParameters57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30S3Bucket9E2CBC0B"
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+                "s3:DeleteObject*",
+                "s3:PutObject",
+                "s3:Abort*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "Last5CallsAppBucket0D9783D8",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "Last5CallsAppBucket0D9783D8",
+                          "Arn"
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF",
+        "Roles": [
+          {
+            "Ref": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfS3Bucket55EFA30C"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfS3VersionKey60329B70"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfS3VersionKey60329B70"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265",
+            "Arn"
+          ]
+        },
+        "Handler": "index.handler",
+        "Layers": [
+          {
+            "Ref": "deployStaticWebsiteAwsCliLayer74CBF04E"
+          }
+        ],
+        "Runtime": "python3.6",
+        "Timeout": 900
+      },
+      "DependsOn": [
+        "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF",
+        "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource",
+        "aws:asset:path": "asset.c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf",
+        "aws:asset:property": "Code"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Modules": "aws-cdk=1.89.0,@aws-cdk/assets=1.89.0,@aws-cdk/aws-apigateway=1.89.0,@aws-cdk/aws-applicationautoscaling=1.89.0,@aws-cdk/aws-autoscaling-common=1.89.0,@aws-cdk/aws-cloudwatch=1.89.0,@aws-cdk/aws-codeguruprofiler=1.89.0,@aws-cdk/aws-dynamodb=1.89.0,@aws-cdk/aws-ec2=1.89.0,@aws-cdk/aws-ecr=1.89.0,@aws-cdk/aws-ecr-assets=1.89.0,@aws-cdk/aws-events=1.89.0,@aws-cdk/aws-iam=1.89.0,@aws-cdk/aws-kms=1.89.0,@aws-cdk/aws-lambda=1.89.0,@aws-cdk/aws-logs=1.89.0,@aws-cdk/aws-s3=1.89.0,@aws-cdk/aws-s3-assets=1.89.0,@aws-cdk/aws-s3-deployment=1.89.0,@aws-cdk/aws-sqs=1.89.0,@aws-cdk/aws-ssm=1.89.0,@aws-cdk/cloud-assembly-schema=1.89.0,@aws-cdk/core=1.89.0,@aws-cdk/custom-resources=1.89.0,@aws-cdk/cx-api=1.89.0,@aws-cdk/lambda-layer-awscli=1.89.0,@aws-cdk/region-info=1.89.0,jsii-runtime=node.js/v14.5.0"
+      },
+      "Metadata": {
+        "aws:cdk:path": "MarissaInterviewProjectStack/CDKMetadata/Default"
+      },
+      "Condition": "CDKMetadataAvailable"
+    }
+  },
+  "Parameters": {
+    "AssetParameters75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342S3Bucket0D35B50D": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342\""
+    },
+    "AssetParameters75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342S3VersionKeyC8D51962": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342\""
+    },
+    "AssetParameters75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342ArtifactHash854D0B0B": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342\""
+    },
+    "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3BucketAEADE8C7": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68\""
+    },
+    "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3VersionKeyE415415F": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68\""
+    },
+    "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68ArtifactHashD9A515C3": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68\""
+    },
+    "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfS3Bucket55EFA30C": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf\""
+    },
+    "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfS3VersionKey60329B70": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf\""
+    },
+    "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfArtifactHash85F58E48": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf\""
+    },
+    "AssetParameters57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30S3Bucket9E2CBC0B": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30\""
+    },
+    "AssetParameters57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30S3VersionKey95A7C1ED": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30\""
+    },
+    "AssetParameters57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30ArtifactHash4913416C": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30\""
+    }
+  },
+  "Outputs": {
+    "Last5CallsEndpointE11F0256": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "Last5CallsEndpoint423E5997"
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region"
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/",
+            {
+              "Ref": "Last5CallsEndpointDeploymentStageprod77C2FCCC"
+            },
+            "/"
+          ]
+        ]
+      }
+    }
+  },
+  "Conditions": {
+    "CDKMetadataAvailable": {
+      "Fn::Or": [
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ca-central-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-northwest-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-central-1"
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-3"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "me-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "sa-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

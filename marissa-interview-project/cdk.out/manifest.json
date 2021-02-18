@@ -1,0 +1,1433 @@
+{
+  "version": "9.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "MarissaInterviewProjectStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "MarissaInterviewProjectStack.template.json"
+      },
+      "metadata": {
+        "/MarissaInterviewProjectStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342",
+              "id": "75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342",
+              "packaging": "zip",
+              "sourceHash": "75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342",
+              "s3BucketParameter": "AssetParameters75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342S3Bucket0D35B50D",
+              "s3KeyParameter": "AssetParameters75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342S3VersionKeyC8D51962",
+              "artifactHashParameter": "AssetParameters75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342ArtifactHash854D0B0B"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/construct-compat.ts:431:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:171:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "MarissaInterviewProjectStack.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new Function (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/function.ts:572:29)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:29:22)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68.zip",
+              "id": "e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68",
+              "packaging": "file",
+              "sourceHash": "e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68",
+              "s3BucketParameter": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3BucketAEADE8C7",
+              "s3KeyParameter": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3VersionKeyE415415F",
+              "artifactHashParameter": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68ArtifactHashD9A515C3"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/construct-compat.ts:431:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:171:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "MarissaInterviewProjectStack.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new LayerVersion (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/layers.ts:189:29)",
+              "new AwsCliLayer (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/lambda-layer-awscli/lib/awscli-layer.ts:12:5)",
+              "new BucketDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:193:16)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:58:39)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf",
+              "id": "c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf",
+              "packaging": "zip",
+              "sourceHash": "c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf",
+              "s3BucketParameter": "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfS3Bucket55EFA30C",
+              "s3KeyParameter": "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfS3VersionKey60329B70",
+              "artifactHashParameter": "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfArtifactHash85F58E48"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/construct-compat.ts:431:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:171:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "MarissaInterviewProjectStack.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new Function (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/function.ts:572:29)",
+              "SingletonFunction.ensureLambda (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:119:12)",
+              "new SingletonFunction (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:55:32)",
+              "new BucketDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:190:21)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:58:39)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30",
+              "id": "57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30",
+              "packaging": "zip",
+              "sourceHash": "57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30",
+              "s3BucketParameter": "AssetParameters57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30S3Bucket9E2CBC0B",
+              "s3KeyParameter": "AssetParameters57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30S3VersionKey95A7C1ED",
+              "artifactHashParameter": "AssetParameters57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30ArtifactHash4913416C"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/construct-compat.ts:431:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:171:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "MarissaInterviewProjectStack.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "Object.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/source.ts:86:23)",
+              "/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:207:83",
+              "Array.map (<anonymous>)",
+              "new BucketDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:207:51)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:58:39)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/VanityNumbers/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VanityNumbers9448E191",
+            "trace": [
+              "new Table (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:1096:18)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:14:32)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/VanitiesHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VanitiesHandlerServiceRole46BCF9E5",
+            "trace": [
+              "new Role (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "new Function (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/function.ts:552:31)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:29:22)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/VanitiesHandler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VanitiesHandlerServiceRoleDefaultPolicyCADD368C",
+            "trace": [
+              "new Policy (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
+              "Function.addToPrincipal (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-iam/lib/grant.ts:168:61)",
+              "Table.combinedGrant (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:910:29)",
+              "Table.grantWriteData (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:669:17)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:36:24)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/VanitiesHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VanitiesHandlerADAFC9C2",
+            "trace": [
+              "new Function (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/function.ts:614:35)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:29:22)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/AssetParameters/75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342S3Bucket0D35B50D",
+            "trace": [
+              "new FileAssetParameters (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "MarissaInterviewProjectStack.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new Function (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/function.ts:572:29)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:29:22)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/AssetParameters/75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342S3VersionKeyC8D51962",
+            "trace": [
+              "new FileAssetParameters (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "MarissaInterviewProjectStack.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new Function (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/function.ts:572:29)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:29:22)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/AssetParameters/75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters75997a9e96fa72c2fc4b2ff073a233f5109803b8b9459a1dc3ade0cb15906342ArtifactHash854D0B0B",
+            "trace": [
+              "new FileAssetParameters (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "MarissaInterviewProjectStack.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new Function (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/function.ts:572:29)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:29:22)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3BucketAEADE8C7",
+            "trace": [
+              "new FileAssetParameters (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "MarissaInterviewProjectStack.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new LayerVersion (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/layers.ts:189:29)",
+              "new AwsCliLayer (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/lambda-layer-awscli/lib/awscli-layer.ts:12:5)",
+              "new BucketDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:193:16)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:58:39)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3VersionKeyE415415F",
+            "trace": [
+              "new FileAssetParameters (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "MarissaInterviewProjectStack.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new LayerVersion (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/layers.ts:189:29)",
+              "new AwsCliLayer (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/lambda-layer-awscli/lib/awscli-layer.ts:12:5)",
+              "new BucketDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:193:16)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:58:39)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68ArtifactHashD9A515C3",
+            "trace": [
+              "new FileAssetParameters (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "MarissaInterviewProjectStack.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new LayerVersion (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/layers.ts:189:29)",
+              "new AwsCliLayer (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/lambda-layer-awscli/lib/awscli-layer.ts:12:5)",
+              "new BucketDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:193:16)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:58:39)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/AssetParameters/c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfS3Bucket55EFA30C",
+            "trace": [
+              "new FileAssetParameters (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "MarissaInterviewProjectStack.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new Function (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/function.ts:572:29)",
+              "SingletonFunction.ensureLambda (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:119:12)",
+              "new SingletonFunction (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:55:32)",
+              "new BucketDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:190:21)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:58:39)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/AssetParameters/c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfS3VersionKey60329B70",
+            "trace": [
+              "new FileAssetParameters (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "MarissaInterviewProjectStack.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new Function (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/function.ts:572:29)",
+              "SingletonFunction.ensureLambda (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:119:12)",
+              "new SingletonFunction (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:55:32)",
+              "new BucketDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:190:21)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:58:39)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/AssetParameters/c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfArtifactHash85F58E48",
+            "trace": [
+              "new FileAssetParameters (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "MarissaInterviewProjectStack.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "AssetCode.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/code.ts:251:20)",
+              "new Function (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/function.ts:572:29)",
+              "SingletonFunction.ensureLambda (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:119:12)",
+              "new SingletonFunction (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:55:32)",
+              "new BucketDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:190:21)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:58:39)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/AssetParameters/57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30S3Bucket9E2CBC0B",
+            "trace": [
+              "new FileAssetParameters (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "MarissaInterviewProjectStack.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "Object.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/source.ts:86:23)",
+              "/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:207:83",
+              "Array.map (<anonymous>)",
+              "new BucketDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:207:51)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:58:39)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/AssetParameters/57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30S3VersionKey95A7C1ED",
+            "trace": [
+              "new FileAssetParameters (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "MarissaInterviewProjectStack.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "Object.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/source.ts:86:23)",
+              "/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:207:83",
+              "Array.map (<anonymous>)",
+              "new BucketDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:207:51)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:58:39)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/AssetParameters/57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters57e4ea59c8e7271e48d5e3ccbff4af1e2a9be8751932c342231019ed82bb0d30ArtifactHash4913416C",
+            "trace": [
+              "new FileAssetParameters (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:154:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:74:19)",
+              "MarissaInterviewProjectStack.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack.ts:657:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:78:25)",
+              "new Asset (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:151:40)",
+              "Object.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/source.ts:86:23)",
+              "/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:207:83",
+              "Array.map (<anonymous>)",
+              "new BucketDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:207:51)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:58:39)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/LastFiveHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LastFiveHandlerServiceRole8D838C15",
+            "trace": [
+              "new Role (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "new Function (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/function.ts:552:31)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:39:26)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/LastFiveHandler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LastFiveHandlerServiceRoleDefaultPolicy187ACC3B",
+            "trace": [
+              "new Policy (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
+              "Function.addToPrincipal (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-iam/lib/grant.ts:168:61)",
+              "Table.combinedGrant (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:910:29)",
+              "Table.grantReadData (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:624:17)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:45:24)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/LastFiveHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LastFiveHandler732DFC20",
+            "trace": [
+              "new Function (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/function.ts:614:35)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:39:26)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/Last5CallsEndpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Last5CallsEndpoint423E5997",
+            "trace": [
+              "new RestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:694:22)",
+              "new LambdaRestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:50:5)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:48:24)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/Last5CallsEndpoint/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Last5CallsEndpointCloudWatchRoleD2243925",
+            "trace": [
+              "new Role (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "LambdaRestApi.configureCloudWatchRole (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:494:18)",
+              "new RestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:711:12)",
+              "new LambdaRestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:50:5)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:48:24)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/Last5CallsEndpoint/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Last5CallsEndpointAccountEF6EF419",
+            "trace": [
+              "LambdaRestApi.configureCloudWatchRole (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:499:22)",
+              "new RestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:711:12)",
+              "new LambdaRestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:50:5)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:48:24)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/Last5CallsEndpoint/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Last5CallsEndpointDeploymentAA7818ECead021f773229364453e0990f6f50f89",
+            "trace": [
+              "new Deployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/deployment.ts:75:21)",
+              "LambdaRestApi.configureDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:510:32)",
+              "new RestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:714:10)",
+              "new LambdaRestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:50:5)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:48:24)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/Last5CallsEndpoint/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Last5CallsEndpointDeploymentStageprod77C2FCCC",
+            "trace": [
+              "new Stage (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/stage.ts:240:22)",
+              "LambdaRestApi.configureDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:520:30)",
+              "new RestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:714:10)",
+              "new LambdaRestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:50:5)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:48:24)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/Last5CallsEndpoint/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Last5CallsEndpointE11F0256",
+            "trace": [
+              "LambdaRestApi.configureDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:525:7)",
+              "new RestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/restapi.ts:714:10)",
+              "new LambdaRestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:50:5)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:48:24)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/Last5CallsEndpoint/Default/{proxy+}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Last5CallsEndpointproxy9049E1E0",
+            "trace": [
+              "new Resource (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:446:22)",
+              "new ProxyResource (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:518:5)",
+              "RootResource.addProxy (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:191:12)",
+              "new LambdaRestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:48:24)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/Last5CallsEndpoint/Default/{proxy+}/ANY/ApiPermission.MarissaInterviewProjectStackLast5CallsEndpoint467EE6C9.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Last5CallsEndpointproxyANYApiPermissionMarissaInterviewProjectStackLast5CallsEndpoint467EE6C9ANYproxy0B646D64",
+            "trace": [
+              "Function.addPermission (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:245:5)",
+              "LambdaIntegration.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:63:18)",
+              "new Method (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:197:36)",
+              "ProxyResource.addMethod (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "ProxyResource.addMethod (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:540:18)",
+              "new ProxyResource (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:527:29)",
+              "RootResource.addProxy (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:191:12)",
+              "new LambdaRestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:48:24)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/Last5CallsEndpoint/Default/{proxy+}/ANY/ApiPermission.Test.MarissaInterviewProjectStackLast5CallsEndpoint467EE6C9.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Last5CallsEndpointproxyANYApiPermissionTestMarissaInterviewProjectStackLast5CallsEndpoint467EE6C9ANYproxy88177B3F",
+            "trace": [
+              "Function.addPermission (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:245:5)",
+              "LambdaIntegration.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:71:20)",
+              "new Method (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:197:36)",
+              "ProxyResource.addMethod (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "ProxyResource.addMethod (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:540:18)",
+              "new ProxyResource (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:527:29)",
+              "RootResource.addProxy (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:191:12)",
+              "new LambdaRestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:48:24)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/Last5CallsEndpoint/Default/{proxy+}/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Last5CallsEndpointproxyANYF509B819",
+            "trace": [
+              "new Method (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:215:22)",
+              "ProxyResource.addMethod (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "ProxyResource.addMethod (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:540:18)",
+              "new ProxyResource (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:527:29)",
+              "RootResource.addProxy (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:191:12)",
+              "new LambdaRestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:48:24)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/Last5CallsEndpoint/Default/ANY/ApiPermission.MarissaInterviewProjectStackLast5CallsEndpoint467EE6C9.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Last5CallsEndpointANYApiPermissionMarissaInterviewProjectStackLast5CallsEndpoint467EE6C9ANY98F6B870",
+            "trace": [
+              "Function.addPermission (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:245:5)",
+              "LambdaIntegration.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:63:18)",
+              "new Method (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:197:36)",
+              "RootResource.addMethod (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "ProxyResource.addMethod (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:537:29)",
+              "new ProxyResource (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:527:29)",
+              "RootResource.addProxy (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:191:12)",
+              "new LambdaRestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:48:24)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/Last5CallsEndpoint/Default/ANY/ApiPermission.Test.MarissaInterviewProjectStackLast5CallsEndpoint467EE6C9.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Last5CallsEndpointANYApiPermissionTestMarissaInterviewProjectStackLast5CallsEndpoint467EE6C9ANY5E9457AA",
+            "trace": [
+              "Function.addPermission (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/function-base.ts:245:5)",
+              "LambdaIntegration.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/integrations/lambda.ts:71:20)",
+              "new Method (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:197:36)",
+              "RootResource.addMethod (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "ProxyResource.addMethod (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:537:29)",
+              "new ProxyResource (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:527:29)",
+              "RootResource.addProxy (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:191:12)",
+              "new LambdaRestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:48:24)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/Last5CallsEndpoint/Default/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Last5CallsEndpointANY87A11631",
+            "trace": [
+              "new Method (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/method.ts:215:22)",
+              "RootResource.addMethod (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:187:12)",
+              "ProxyResource.addMethod (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:537:29)",
+              "new ProxyResource (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:527:29)",
+              "RootResource.addProxy (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/resource.ts:191:12)",
+              "new LambdaRestApi (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-apigateway/lib/lambda-api.ts:57:17)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:48:24)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/Last5CallsAppBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Last5CallsAppBucket0D9783D8",
+            "trace": [
+              "new Bucket (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1326:22)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:53:33)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/Last5CallsAppBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Last5CallsAppBucketPolicyA361D4C8",
+            "trace": [
+              "new BucketPolicy (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3/lib/bucket-policy.ts:42:21)",
+              "Bucket.addToResourcePolicy (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:488:21)",
+              "Function.addToPrincipalOrResource (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-iam/lib/grant.ts:147:45)",
+              "Bucket.grantPublicAccess (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:686:22)",
+              "new Bucket (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1384:12)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:53:33)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/deployStaticWebsite/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "deployStaticWebsiteAwsCliLayer74CBF04E",
+            "trace": [
+              "new LayerVersion (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/layers.ts:197:39)",
+              "new AwsCliLayer (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/lambda-layer-awscli/lib/awscli-layer.ts:12:5)",
+              "new BucketDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:193:16)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:58:39)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/deployStaticWebsite/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "deployStaticWebsiteCustomResource73B4205E",
+            "trace": [
+              "new CustomResource (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/custom-resource.ts:119:21)",
+              "new BucketDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:218:5)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:58:39)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265",
+            "trace": [
+              "new Role (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "new Function (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/function.ts:552:31)",
+              "SingletonFunction.ensureLambda (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:119:12)",
+              "new SingletonFunction (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:55:32)",
+              "new BucketDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:190:21)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:58:39)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF",
+            "trace": [
+              "new Policy (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
+              "Function.addToPrincipal (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-iam/lib/grant.ts:168:61)",
+              "Function.addToPrincipalOrResource (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-iam/lib/grant.ts:119:26)",
+              "Import.grant (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:726:27)",
+              "Import.grantRead (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:585:17)",
+              "Asset.grantRead (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:210:17)",
+              "Object.bind (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/source.ts:93:15)",
+              "/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:207:83",
+              "Array.map (<anonymous>)",
+              "new BucketDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:207:51)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:58:39)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536",
+            "trace": [
+              "new Function (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/function.ts:614:35)",
+              "SingletonFunction.ensureLambda (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:119:12)",
+              "new SingletonFunction (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-lambda/lib/singleton-lambda.ts:55:32)",
+              "new BucketDeployment (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/aws-s3-deployment/lib/bucket-deployment.ts:190:21)",
+              "new MarissaInterviewProjectStack (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/lib/marissa-interview-project-stack.ts:58:39)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/bin/marissa-interview-project.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Module.m._compile (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1201:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)",
+              "Module.load (internal/modules/cjs/loader.js:1050:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:938:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:51:24)",
+              "/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
+              "visit (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
+              "injectMetadataResources (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)",
+              "process.EventEmitter.emit (domain.js:486:12)",
+              "process.emit (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/MarissaInterviewProjectStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:60:27)",
+              "/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
+              "visit (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
+              "injectMetadataResources (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:421:26)",
+              "process.emit (events.js:314:20)",
+              "process.EventEmitter.emit (domain.js:486:12)",
+              "process.emit (/Users/marissamcdowell/dev/voicefoundry/marissa-interview-project/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
